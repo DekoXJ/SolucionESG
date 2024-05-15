@@ -14,7 +14,7 @@ class PruebaEcuacionSegundoGrado(unittest.TestCase):
 
         # Do
         ecuacion = EcuacionSegundoGrado()
-        x1Actual, x2Actual = ecuacion.calculoECS(a, b, c)
+        x1Actual, x2Actual = ecuacion.calculoESG(a, b, c)
 
         # Assert
         precision = math.fabs(x1Esperado - x1Actual)
@@ -38,7 +38,7 @@ class PruebaEcuacionSegundoGrado(unittest.TestCase):
         # Do
         for item in items:
             with self.subTest(item["Case"]):
-                RaizActual1, RaizActual2 = ecuacion.calculoECS(item["a"], item["b"], item["c"])
+                RaizActual1, RaizActual2 = ecuacion.calculoESG(item["a"], item["b"], item["c"])
 
         # Assert
         precision = math.fabs(item["RaizEsperada1"] - RaizActual1)
